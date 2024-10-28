@@ -1,0 +1,11 @@
+Comparing Samsung with Nokia:
+Nokia has a larger display area than Samsung.
+Nokia has a sharper display than Samsung.
+
+Comparing Nokia with Pixel:
+Pixel has a larger display area than Nokia.
+Nokia has a sharper display than Pixel.
+
+Comparing Samsung with Pixel:
+Pixel has a larger display area than Samsung.
+Samsung has a sharper display than Pixel.
