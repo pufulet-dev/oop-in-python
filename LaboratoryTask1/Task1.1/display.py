@@ -24,7 +24,7 @@ class Display:
             return f"{self.model} and {other.model} have the same sharpness."
 
     def compareWithMonitor(self, other):
-        comparisons = [f"Comparing {self.model} with {other.model}:"]
+        comparisons = [f"  {self.model} VS {other.model}:"]
         comparisons.append(self.compareSize(other))
         comparisons.append(self.compareSharpness(other))
         return "\n".join(comparisons)
