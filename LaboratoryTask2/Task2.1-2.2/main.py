@@ -5,12 +5,15 @@ from syrup_cappuccino import SyrupCappuccino
 from enums import Intensity, SyrupType
 
 if __name__ == "__main__":
-    cappuccino = Cappuccino(Intensity.NORMAL, 200)
+    cappuccino = Cappuccino(Intensity.NORMAL, 50)
     americano = Americano(Intensity.LIGHT, 660)
     pumpkin_spice_latte = PumpkinSpiceLatte(Intensity.STRONG, 100, 75)
     syrup_cappuccino = SyrupCappuccino(Intensity.NORMAL, 150, SyrupType.CARAMEL)
 
-    print(cappuccino)
-    print(pumpkin_spice_latte)
-    print(americano)
-    print(syrup_cappuccino)
+    cappuccino.printDetails()
+    print()
+    americano.printDetails()
+    print()
+    pumpkin_spice_latte.printDetails()
+    print()
+    syrup_cappuccino.printDetails()
