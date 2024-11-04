@@ -8,7 +8,7 @@ class PumpkinSpiceLatte(Coffee):
         self.__mg_of_pumpkin_spice = mg_of_pumpkin_spice
 
     def printDetails(self):
-        print(f"Coffee intensity: {self._coffee_intensity.value}")
+        super().printDetails()
         print(f"Pumpkin Spice Latte milk: {self.__ml_of_milk} ml")
         print(f"Pumpkin Spice: {self.__mg_of_pumpkin_spice} mg")
 
@@ -16,4 +16,4 @@ class PumpkinSpiceLatte(Coffee):
         print("Making Pumpkin Spice Latte")
         print(f"Intensity set to {self._coffee_intensity.value}")
         print(f"Adding {self.__ml_of_milk} mls of milk")
-        print(f"Adding {self.__mg_of_pumpkin_spice} mls of pumpkin spice")
+        print(f"Adding {self.__mg_of_pumpkin_spice} mgs of pumpkin spice")

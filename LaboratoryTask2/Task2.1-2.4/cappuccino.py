@@ -7,7 +7,7 @@ class Cappuccino(Coffee):
         self.__ml_of_milk = ml_of_milk
 
     def printDetails(self):
-        print(f"Coffee intensity: {self._coffee_intensity.value}")
+        super().printDetails()
         print(f"Cappuccino milk: {self.__ml_of_milk} ml")
 
     def makeCappuccino(self):
