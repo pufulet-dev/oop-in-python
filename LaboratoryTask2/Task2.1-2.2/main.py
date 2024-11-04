@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     cappuccino.printDetails()
     print()
-    americano.printDetails()
+    americano.printDetails()  
     print()
     pumpkin_spice_latte.printDetails()
     print()
