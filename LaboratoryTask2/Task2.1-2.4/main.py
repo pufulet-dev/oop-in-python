@@ -10,6 +10,7 @@ if __name__ == "__main__":
     pumpkin_spice_latte = PumpkinSpiceLatte(Intensity.STRONG, 100, 75)
     syrup_cappuccino = SyrupCappuccino(Intensity.NORMAL, 150, SyrupType.CARAMEL)
 
+    print("Coffee Details:")
     cappuccino.printDetails()
     print()
     americano.printDetails()  
@@ -17,3 +18,9 @@ if __name__ == "__main__":
     pumpkin_spice_latte.printDetails()
     print()
     syrup_cappuccino.printDetails()
+    print()
+
+    print("Making Coffee:")
+    cappuccino.makeCappuccino()
+    print()
+    pumpkin_spice_latte.makePumpkinSpiceLatte()
