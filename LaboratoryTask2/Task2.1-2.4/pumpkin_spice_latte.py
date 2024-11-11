@@ -12,7 +12,7 @@ class PumpkinSpiceLatte(Coffee):
         print(f"Pumpkin Spice Latte milk: {self.__ml_of_milk} ml")
         print(f"Pumpkin Spice: {self.__mg_of_pumpkin_spice} mg")
 
-    def makePumpkinSpiceLatte(self):
+    def make_coffee(self):
         print("Making Pumpkin Spice Latte")
         print(f"Intensity set to {self._coffee_intensity.value}")
         print(f"Adding {self.__ml_of_milk} mls of milk")
