@@ -1,19 +1,19 @@
 from cappuccino import Cappuccino
 from enums import SyrupType
+from enums import Intensity
 
 class SyrupCappuccino(Cappuccino):
-    def __init__(self, intensity, ml_of_milk, syrup: SyrupType):
-        super().__init__(intensity, ml_of_milk)
+    def __init__(self, intensity: Intensity, ml_of_milk: int, syrup: SyrupType, name: str = "SyrupCappuccino"):
+        super().__init__(intensity, ml_of_milk, name)
         self._syrup = syrup  
 
     def printDetails(self):
-        print(f"Coffee Type: Syrup Cappuccino")
-        print(f"Intensity: {self._coffee_intensity.value}")
-        print(f"Syrup Cappuccino milk: {self._ml_of_milk} ml")
-        print(f"Syrup: {self._syrup} ml")
+        super().printDetails()
+        print(f"Syrup: {self._syrup}")
 
-    def make_coffee(self):
-        print("Making Syrup Cappuccino")
-        print(f"Intensity set to {self._coffee_intensity.value}")
-        print(f"Adding {self._ml_of_milk} mls of milk")
-        print(f"Adding syrup: {self._syrup} ml")
+    def makeSyrupCappuccino(self):
+        print("------------------------------")
+        print(f"Making {self._name}")
+        self.printDetails()
+        print("------------------------------")
+        return self

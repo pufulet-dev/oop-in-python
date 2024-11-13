@@ -1,18 +1,19 @@
 from coffee import Coffee
 from enums import Intensity
+from cappuccino import Cappuccino
 
 class PumpkinSpiceLatte(Cappuccino):
-    def __init__(self, intensity_of_coffee: Intensity, ml_of_milk: int, mg_of_pumpkin_spice: int):
-        super().__init__(intensity_of_coffee, name="PumpkinSpiceLatte")
-        self.__ml_of_milk = ml_of_milk
-        self.__mg_of_pumpkin_spice = mg_of_pumpkin_spice
+    def __init__(self, intensity: Intensity, ml_of_milk: int, mg_of_pumpkin_spice: int, name: str = "PumpkinSpiceLatte"):
+        super().__init__(intensity, ml_of_milk, name)
+        self._mg_of_pumpkin_spice = mg_of_pumpkin_spice
 
     def printDetails(self):
         super().printDetails()
-        print(f"Pumpkin Spice: {self.__mg_of_pumpkin_spice} mg")
+        print(f"Pumpkin Spice: {self._mg_of_pumpkin_spice} mg")
 
-    # TODO create class specific methods
-    def make_pumpkin_spice_latte(self):
-        print("Making Pumpkin Spice Latte")
-        # TODO reuse base classes code
-        print(f"Adding {self.__mg_of_pumpkin_spice} mgs of pumpkin spice")
+    def makePumpkinSpiceLatte(self):
+        print("------------------------------")
+        print(f"Making {self._name}")
+        self.printDetails()
+        print("------------------------------")
+        return self

@@ -2,16 +2,17 @@ from coffee import Coffee
 from enums import Intensity
 
 class Cappuccino(Coffee):
-    def __init__(self, intensity: Intensity, ml_of_milk: int):
-        super().__init__(intensity, name="Cappuccino")
+    def __init__(self, intensity: Intensity, ml_of_milk: int, name: str = "Cappuccino"):
+        super().__init__(intensity, name)
         self._ml_of_milk = ml_of_milk  
 
     def printDetails(self):
-        print(f"Coffee Type: {self._name}")
-        super.printDetails()
+        super().printDetails()
         print(f"Cappuccino milk: {self._ml_of_milk} ml")
 
-    def make_coffee(self):
-        print("Making Cappuccino")
-        print(f"Intensity set to {self._coffee_intensity.value}")
-        print(f"Adding {self._ml_of_milk} mls of milk")
+    def makeCappuccino(self):
+        print("------------------------------")
+        print(f"Making {self._name}")
+        self.printDetails()
+        print("------------------------------")
+        return self
