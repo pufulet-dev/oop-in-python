@@ -12,7 +12,7 @@ class ElectricStation(Refuelable):
 
     def refuel(self, carId: str) -> None:
         self.electric_cars_served += 1
-        print(f"Refueling electric car {carId}.")
+        print(f"Charging electric car {carId}.")
 
 
 class GasStation(Refuelable):
