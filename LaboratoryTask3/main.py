@@ -22,12 +22,10 @@ def main():
     electric_station = CarStation(
         dining_service_people,
         refueling_service_electric,
-        None,
         electric_queue
     )
     gas_station = CarStation(
         dining_service_robots,
-        None,
         refueling_service_gas,
         gas_queue
     )
