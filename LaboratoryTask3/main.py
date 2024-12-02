@@ -10,7 +10,7 @@ from services.semaphore import Semaphore
 from services.scheduler import Scheduler
 
 def main():
-    input_dir = "queue"
+    input_dir = "queue"  # Directory containing JSON files
 
     dining_service_people = PeopleDinner()
     dining_service_robots = RobotDinner()
@@ -33,18 +33,13 @@ def main():
     )
 
     semaphore = Semaphore(electric_station, gas_station)
-    scheduler = Scheduler(semaphore, input_dir, read_interval=2, serve_interval=3)
+
+    scheduler = Scheduler(semaphore, input_dir, read_interval=4)
 
     try:
         scheduler.start()
-        while True:
-            time.sleep(1)  
-            if semaphore.all_queues_empty():
-                print("All cars processed. Exiting...")
-                break
     except KeyboardInterrupt:
         print("Shutting down...")
-    finally:
         scheduler.stop()
 
     print(f"Total people served: {dining_service_people.people_served}")
