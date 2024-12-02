@@ -19,19 +19,32 @@ def main():
     electric_queue = NumberQueue()
     gas_queue = NumberQueue()
 
-    electric_station = CarStation(dining_service_people, refueling_service_electric, None, electric_queue)
-    gas_station = CarStation(dining_service_robots, refueling_service_gas, None, gas_queue)
+    electric_station = CarStation(
+        dining_service_people,
+        refueling_service_electric,
+        None,
+        electric_queue
+    )
+    gas_station = CarStation(
+        dining_service_robots,
+        None,
+        refueling_service_gas,
+        gas_queue
+    )
 
     semaphore = Semaphore(electric_station, gas_station)
-
     scheduler = Scheduler(semaphore, input_dir, read_interval=2, serve_interval=3)
 
     try:
         scheduler.start()
         while True:
-            time.sleep(1)
+            time.sleep(1)  
+            if semaphore.all_queues_empty():
+                print("All cars processed. Exiting...")
+                break
     except KeyboardInterrupt:
         print("Shutting down...")
+    finally:
         scheduler.stop()
 
     print(f"Total people served: {dining_service_people.people_served}")
