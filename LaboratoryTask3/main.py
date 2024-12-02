@@ -10,7 +10,7 @@ from services.semaphore import Semaphore
 from services.scheduler import Scheduler
 
 def main():
-    input_dir = "queue"  # Directory containing JSON files
+    input_dir = "queue"  
 
     dining_service_people = PeopleDinner()
     dining_service_robots = RobotDinner()
